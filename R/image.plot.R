@@ -24,7 +24,7 @@
     legend.mar = ifelse(horizontal, 3.1, 5.1), legend.lab = NULL,
     legend.line= 2,                    
     graphics.reset = FALSE, bigplot = NULL, smallplot = NULL, 
-    legend.only = FALSE,  lab.breaks = NULL, 
+    legend.only = FALSE,  lab.breaks = NULL, xlab="", ylab="",
     axis.args = NULL, legend.args = NULL, legend.cex=1.0, midpoint = FALSE, border = NA, 
     lwd = 1, verbose=FALSE) {
     # Thanks to S. Koehler and  S. Woodhead
@@ -112,12 +112,12 @@
     # draw color scales the two  cases are horizontal/vertical 
     # add a label if this is passed.
     if (!horizontal) {
-            image(ix, iy, iz, xaxt = "n", yaxt = "n", xlab = "", 
-                ylab = "", col = col, breaks=breaks)
+            image(ix, iy, iz, xaxt = "n", yaxt = "n", xlab = xlab, 
+                ylab = ylab, col = col, breaks=breaks)
     }
     else {
-            image(iy, ix, t(iz), xaxt = "n", yaxt = "n", xlab = "", 
-                ylab = "", col = col, breaks=breaks)
+            image(iy, ix, t(iz), xaxt = "n", yaxt = "n", xlab = xlab, 
+                ylab = ylab, col = col, breaks=breaks)
     }
     # create the argument list to draw the axis
     #  this avoids 4 separate calls to axis and allows passing extra

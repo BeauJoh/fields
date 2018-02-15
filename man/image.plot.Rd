@@ -42,7 +42,7 @@ often arise from regular grids transformed with a map projection.
     legend.mar = ifelse(horizontal, 3.1, 5.1), legend.lab = NULL,
     legend.line= 2,                    
     graphics.reset = FALSE, bigplot = NULL, smallplot = NULL, 
-    legend.only = FALSE,  lab.breaks = NULL, 
+    legend.only = FALSE,  lab.breaks = NULL, xlab="", ylab="",
     axis.args = NULL, legend.args = NULL, legend.cex=1.0, midpoint = FALSE, border = NA, 
     lwd = 1,verbose = FALSE )
 }
@@ -104,6 +104,11 @@ values before entering the function.
 If false (default) legend will be a vertical strip on the right side. If
 true the legend strip will be along the bottom.  
 }
+
+\item{xlab}{text string label to title the x axis.}
+
+\item{ylab}{text string label to title the y axis.}
+
 \item{lab.breaks}{ If breaks are supplied these are text string labels
 to put at each break value. This is intended to label axis on a
 transformed scale such as logs.}
